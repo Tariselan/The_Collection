@@ -1,0 +1,102 @@
+body {
+  background:-webkit-linear-gradient(#121212,#000000);
+}
+button {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+button#Title {
+  padding: 10px;
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #DEDEDE;
+  color: #BCBCBC;
+}
+button.Actions {
+  background-color: #FFCC00;
+}
+button.Upgrades {
+  background-color: #9BFF70;
+}
+button.Trades {
+  background-color: #2FBADC;
+}
+button.Arena {
+  background-color: #C60404;
+}
+button#unlockTrade {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+  transition: display 1s;
+}
+button#buySword {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+  transition: display 1s;
+}
+button#unlockArena {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+  transition: display 1s;
+}
+div {
+  padding: 20px;
+  border: 5px solid #444477;
+  background-color: #666699;
+  width: 160px;
+  position: absolute;
+  text-align: center;
+}
+div#Title {
+  width: 90%;
+  height: 90%;
+  left: 3%;
+  top: 1%;
+  z-index: 100;
+  background-color: #CDCDCD;
+  border: 7px solid #ABABAB;
+  color: #343434;
+}
+div.firstLine {
+  top: 10px;
+}
+div#Actions  {
+  left: 43%;
+}
+div#Resources {
+  left: 10%;
+}
+div#Upgrades {
+  right: 10%;
+}
+div.secondLine {
+  top: 310px;
+}
+div#Trades {
+  left: 10%;
+}
+div#TradesBlock {
+  left: 10%;
+  height: 131px;
+  transition: display 1s;
+}
+div#Arena {
+  left: 41%;
+  width: 220px;
+  display: none;
+  transition: display 1s;
+}
+h1 {
+  font-size: 27px;
+}
+h1#Title {
+  font-size: 54px;
+}
+h2 {
+  font-size: 18px;
+}
