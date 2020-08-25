@@ -12,12 +12,23 @@ function Start() {
     TitleDiv.style.display = "none";
   }
 }
-// HEALTHS
+// Objects
 function creature(name, creCHealth, creMHealth) {
   this.name = name;
   this.creCHealth = creCHealth;
   this.creMHealth = creMHealth;
 }
+function player(playerName, playerCHealth, playerMHealth) {
+  this.playerName = playerName;
+  this.playerCHealth = playerCHealth;
+  this.playerMHealth = playerMHealth;
+  this.changeName = function(name) {
+    name = prompt("Enter a new name:");
+    this.name = name;
+  }
+}
+// Creatures
+
 // Upgrades
 var hasAxe = false; // boolean to tell the code whether or not the axe has been bought
 var hasTPost = false; // boolean to tell the code whether or not the Trading Post has been bought
@@ -43,9 +54,10 @@ function buyAxe() {
     const showUTrade = document.getElementById("unlockTrade");
     showUTrade.style.opacity = "1";
     showUTrade.style.display = "inline-block";
+    const buyAxe = document.getElementById("buyAxe");
+    buyAxe.style.display = "none"
     document.getElementById("coins").innerHTML = coins; // sets the span with the id "coins" to the coin variable
-    document.getElementById("woodButton").innerHTML = "Collect Wood"; // sets the button with the id "woodButton" to "Collect Wood"
-    document.getElementById("buyAxe").innerHTML = "Bought Axe"; // Sets the button with id "buyAxe" to "Bought Axe" to indicate to the player that they have bought it
+    document.getElementById("woodButton").innerHTML = "Collect Wood"; // sets the button with the id "woodButton" to "Collect
   }
 }
 function unlockTrade() {
@@ -58,6 +70,8 @@ function unlockTrade() {
     const showBSword = document.getElementById("buySword");
     showBSword.style.opacity = "1";
     showBSword.style.display = "inline-block";
+    const showUTrade = document.getElementById("unlockTrade");
+    showUTrade.style.display = "none";
     document.getElementById("coins").innerHTML = coins;
     document.getElementById("wood").innerHTML = wood;
     document.getElementById("unlockTrade").innerHTML = "Bought Trading Post";
@@ -77,13 +91,15 @@ function buySword() {
     stone = stone - 6;
     wood = wood - 10;
     coins = coins - 22;
+    const unlArena = document.getElementById("unlockArena");
+    unlArena.style.opacity = "1";
+    unlArena.style.display = "inline-block";
+    const showBSword = document.getElementById("buySword");
+    showBSword.style.display = "none";
     document.getElementById("stone").innerHTML = stone;
     document.getElementById("wood").innerHTML = wood;
     document.getElementById("coins").innerHTML = coins;
     document.getElementById("buySword").innerHTML = "Bought Sword";
-    const unlArena = document.getElementById("unlockArena");
-    unlArena.style.opacity = "1";
-    unlArena.style.display = "inline-block";
   }
 }
 function unlockArena() {
@@ -91,6 +107,8 @@ function unlockArena() {
     coins = coins - 100;
     const arena = document.getElementById("Arena");
     arena.style.display = "block";
+    const unlArena = document.getElementById("unlockArena");
+    unlArena.style.display = "none";
     document.getElementById("coins").innerHTML = coins;
     document.getElementById("unlockArena").innerHTML = "Bought Arena Pass";
   }
