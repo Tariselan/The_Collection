@@ -29,6 +29,7 @@ function player(playerName, playerCHealth, playerMHealth) {
     }
     this.name = name;
     document.getElementById("playerName").innerHTML = name;
+    document.getElementById("playerNameS").innerHTML = name;
   }
 }
 var player = new player("Player", 100, 100);
