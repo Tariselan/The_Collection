@@ -24,9 +24,14 @@ function player(playerName, playerCHealth, playerMHealth) {
   this.playerMHealth = playerMHealth;
   this.changeName = function(name) {
     name = prompt("Enter a new name:");
+    if (name == "") {
+      name = "Player";
+    }
     this.name = name;
+    document.getElementById("playerName").innerHTML = name;
   }
 }
+var player = new player("Player", 100, 100);
 // Creatures
 
 // Upgrades

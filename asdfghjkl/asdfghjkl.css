@@ -92,6 +92,9 @@ div#Arena {
   display: none;
   transition: display 1s;
 }
+div#Statistics {
+  right: 10%;
+}
 h1 {
   font-size: 27px;
 }
