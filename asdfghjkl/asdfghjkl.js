@@ -13,15 +13,20 @@ function Start() {
   }
 }
 // Objects
-function creature(name, creCHealth, creMHealth) {
+function creature(name, creCHealth, creMHealth, creBaseDamage, creCritDamage) {
   this.name = name;
-  this.creCHealth = creCHealth;
-  this.creMHealth = creMHealth;
+  this.CHealth = creCHealth;
+  this.MHealth = creMHealth;
+  this.BaseDamage = creBaseDamage;
+  this.CritDamage = creCritDamage;
 }
-function player(playerName, playerCHealth, playerMHealth) {
-  this.playerName = playerName;
-  this.playerCHealth = playerCHealth;
-  this.playerMHealth = playerMHealth;
+function player(playerName, playerCHealth, playerMHealth, playerBaseDamage, playerCritDamage) {
+  this.Name = playerName;
+  this.CHealth = playerCHealth;
+  this.MHealth = playerMHealth;
+  this.BaseDamage = playerBaseDamage;
+  this.BaseDamage = pBaseD;
+  this.CritDamage = playerCritDamage;
   this.changeName = function(name) {
     name = prompt("Enter a new name:");
     if (name == "") {
@@ -32,7 +37,9 @@ function player(playerName, playerCHealth, playerMHealth) {
     document.getElementById("playerNameS").innerHTML = name;
   }
 }
-var player = new player("Player", 100, 100);
+var pBaseD = Math.floor(Math.random() * 10 + 5);
+var pCritD = pBaseD * (Math.floor(Math.random() * 3) + 1);
+var player = new player("Player", 100, 100, pBaseD, );
 // Creatures
 
 // Upgrades

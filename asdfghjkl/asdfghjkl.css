@@ -14,6 +14,13 @@ button#Title {
   border: 2px solid #BCBCBC;
   color: #676767;
 }
+button#changeName {
+  position:relative;
+  top: -15px;
+  padding: 5px;
+  font-size: 12px;
+  height: 26px;
+}
 button.Actions {
   background-color: #F9EC54;
 }
