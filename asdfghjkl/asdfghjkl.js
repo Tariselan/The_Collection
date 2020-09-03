@@ -14,7 +14,7 @@ function Start() {
 }
 // Objects
 function creature(name, creCHealth, creMHealth, creBaseDamage, creCritDamage) {
-  this.name = name;
+  this.Name = name;
   this.CHealth = creCHealth;
   this.MHealth = creMHealth;
   this.BaseDamage = creBaseDamage;
@@ -37,11 +37,23 @@ function player(playerName, playerCHealth, playerMHealth, playerBaseDamage, play
     document.getElementById("playerNameS").innerHTML = name;
   }
 }
-var pBaseD = Math.floor(Math.random() * 10 + 5);
-var pCritD = pBaseD * (Math.floor(Math.random() * 3) + 1);
+var pBaseD = 7.5;
+var pCritD = 10;
 var player = new player("Player", 100, 100, pBaseD, );
 // Creatures
-
+var dKBaseD = 7.5;
+var dKCritD = 10;
+var Dark_Knight = new creature("Dark Knight", 100, 100, dKBaseD, dKCritD);
+function newCreature() {
+  var amouCre = 1; // amouCre is how many creatures (not including the player) there are
+  var a = Math.floor(Math.random() * amouCre);
+  if (a == 1) {
+    document.getElementById("cre").innerHTML = Dark_Knight.Name;
+    document.getElementById("creCHealth").innerHTML = Dark_Knight.CHealth;
+    document.getElementById("creMHealth").innerHTML = Dark_Knight.MHealth;
+  }
+}
+newCreature();
 // Upgrades
 var hasAxe = false; // boolean to tell the code whether or not the axe has been bought
 var hasTPost = false; // boolean to tell the code whether or not the Trading Post has been bought
